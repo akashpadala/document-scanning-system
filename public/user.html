@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Document Scanner</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="welcomeMessage">Welcome to Document Scanner</h1> <!-- Dynamic message -->
+    <div class="card">
+      <p>Credits: <span id="credits">0</span></p>
+      <input type="file" id="fileInput" accept=".txt">
+      <div class="primary-button-group">
+        <button class="btn-primary" onclick="checkMatches()">Check Matches</button>
+        <button id="uploadBtn" class="btn-primary" onclick="uploadFile()" style="display: none;">Upload</button>
+      </div>
+      <div class="secondary-button-group">
+        <button class="btn-secondary" onclick="requestCredits()">Request Credits</button>
+        <button class="btn-secondary" onclick="exportHistory()">Export History</button>
+        <button class="btn-secondary" onclick="clearForm()">Clear</button>
+        <button class="btn-secondary" onclick="logout()">Logout</button>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Past Scans</h2>
+      <ul id="pastScans" class="list"></ul>
+    </div>
+    <div class="card">
+      <h2>Matching Documents (Preview)</h2>
+      <ul id="matches" class="list"></ul>
+    </div>
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>

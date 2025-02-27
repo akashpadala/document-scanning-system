@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "express": "^4.21.2",
+    "sqlite3": "^5.1.7"
+  },
+  "name": "document-scanning-system",
+  "version": "1.0.0",
+  "description": "1. Install Node.js (v16+ recommended).\r 2. Clone this repository: `git clone <repo-url>`\r 3. Navigate to the project folder: `cd document-scanner`\r 4. Install dependencies: `npm install express sqlite3`\r 5. Create an `uploads/` folder: `mkdir uploads`\r 6. Start the server: `node server.js`\r 7. Open `http://localhost:3000` in your browser.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {}
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Admin Panel</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="welcomeMessage">Welcome to Admin Panel</h1> <!-- Dynamic message -->
+    <div class="card">
+      <div class="header">
+        <button class="btn-secondary" onclick="logout()">Logout</button>
+      </div>
+      <h2>Credit Requests</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Timestamp</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="requests"></tbody>
+      </table>
+      <div class="table-actions">
+        <button class="btn-secondary" onclick="approveAllPending()">Approve All Pending</button>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Analytics Dashboard</h2>
+      <table class="analytics-table">
+        <thead>
+          <tr class="analytics-header">
+            <th onclick="sortTable('userAnalytics', 0)">Username</th>
+            <th onclick="sortTable('userAnalytics', 1)">Scans Per User</th>
+            <th onclick="sortTable('userAnalytics', 2)">Credits</th>
+          </tr>
+        </thead>
+        <tbody id="userAnalytics"></tbody>
+      </table>
+      <div class="analytics-grid">
+        <div class="analytics-item">
+          <h3>Top Users by Scans</h3>
+          <ul id="topUsers" class="list"></ul>
+        </div>
+        <div class="analytics-item">
+          <h3>Credit Request Statistics</h3>
+          <ul id="creditStats" class="list"></ul>
+        </div>
+        <div class="analytics-item chart">
+          <h3>Total Credit Usage</h3>
+          <div id="creditBar" class="bar-chart"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>
