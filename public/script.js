@@ -6,7 +6,7 @@ function showSignUp() {
   setTimeout(() => {
     document.getElementById('login-section').style.opacity = '0';
     document.getElementById('signup-section').style.opacity = '1';
-  }, 10); // Small delay for transition
+  }, 10);
   document.getElementById('login-message').textContent = '';
   document.getElementById('signup-message').textContent = '';
 }
@@ -185,7 +185,6 @@ async function exportHistory() {
   a.click();
 }
 
-// Update loadUserProfile to keep functionality
 async function loadUserProfile() {
   console.log('Fetching profile for userId:', userId);
   const res = await fetch(`/user/profile?userId=${userId}`);
@@ -196,7 +195,6 @@ async function loadUserProfile() {
   scansList.innerHTML = data.scans.map(scan => 
     `<li>${scan.filename} - ${scan.timestamp} <button onclick="findMatches(${scan.id})">Find Matches</button></li>`
   ).join('');
-  // Set welcome message for user
   document.getElementById('welcomeMessage').textContent = `Welcome, ${data.username}!`;
 }
 
