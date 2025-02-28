@@ -123,3 +123,24 @@ This is a simple web tool that lets users upload and scan text documents (like .
 - The database (`database.sqlite`) stores all user data, documents, and requests—if you want to clear it, delete the file and restart the app for a fresh start (see instructions in the code’s documentation).
 
 ---
+
+## Test Data
+
+To test the application, use the sample documents provided in the `test_data` folder:
+
+- `document1.txt`: A test document with the text "Hello world! This is a test document for scanning."
+- `document2.txt`: Another test document with similar text ("Hello world! This is another test document for matching.") to demonstrate matching.
+- `document3.txt`: A different document ("Completely different text for testing no matches.") to show no matches.
+
+### How to Test
+1. **Set Up the App**: Follow the setup instructions above to run the application locally.
+2. **Register or Log In**:
+   - Register a new user (e.g., username: `testuser`, password: `testpass`) or log in with an existing account.
+3. **Upload Sample Documents**:
+   - Go to the user dashboard, click "Choose File," select one of the sample `.txt` files (e.g., `document1.txt`), and click "Check Matches" to preview matches.
+   - Click "Upload" to save it (this uses 1 credit).
+   - Repeat with `document2.txt` to see matches with `document1.txt`.
+   - Try `document3.txt` to verify no matches.
+4. **Admin Testing** (Optional)**:
+   - Log in as an admin (set `role = 'admin'` for a user in `database.sqlite` if needed, e.g., username: `admin`, password: `adminpass`).
+   - Go to the admin dashboard, approve credit requests, and check analytics to see scan counts for `testuser`.
